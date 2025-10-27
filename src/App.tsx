@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import superHeros from "./SuperHeros.json";
+import superHerosData from "./SuperHeros.json";
 
 const App: React.FC = () => {
   const nom = "Toto";
   const [compteur, setCompteur] = useState(0);
   const [search, setSearch] = useState("");
+
+  
+  const superHeros = superHerosData.superheros;
 
   useEffect(() => {
     document.title = `Compteur: ${compteur}`;
